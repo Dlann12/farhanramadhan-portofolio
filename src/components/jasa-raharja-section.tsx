@@ -57,9 +57,9 @@ export function JasaRaharjaSection() {
   }, [lightboxIndex, handlePrev, handleNext]);
 
   return (
-    <section id="humas" className="max-w-[1240px] mx-auto px-6 py-20 relative z-10">
+    <section id="humas" className="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-20 relative z-10 overflow-hidden">
       {/* 1. Header & Live Feed Overview */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 sm:mb-24">
         {/* Left Copy */}
         <motion.div
           initial={{ opacity: 0.95, y: 15 }}
@@ -69,24 +69,24 @@ export function JasaRaharjaSection() {
           className="lg:col-span-7 flex flex-col"
         >
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#e62e39] font-bold px-2.5 py-1 rounded bg-[#c81e28]/10 border border-[#c81e28]/25">
+            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-widest text-[#e62e39] font-bold px-2.5 py-1 rounded bg-[#c81e28]/10 border border-[#c81e28]/25">
               <ShieldCheck className="size-3.5 text-[#e62e39]" />
               Pengalaman Terbaru & Kehumasan BUMN
             </span>
           </div>
 
-          <h2 className="font-anton text-[clamp(2.4rem,4.5vw,3.8rem)] uppercase tracking-wide leading-none mb-2 text-white">
+          <h2 className="font-anton text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-wide leading-none mb-2 text-white">
             Humas <span className="text-[#e62e39]">Jasa Raharja</span>
           </h2>
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#a39e9e] mb-6">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#a39e9e] mb-4 sm:mb-6">
             PT Jasa Raharja, Kantor Wilayah Bengkulu
           </p>
 
-          <p className="text-sm md:text-base text-[#d1cece] leading-relaxed mb-6">
+          <p className="text-xs sm:text-sm md:text-base text-[#d1cece] leading-relaxed mb-6">
             Mengelola publikasi kegiatan kantor wilayah lewat akun resmi Instagram. Saya hadir langsung di lapangan bersama mitra strategis seperti Kepolisian, Samsat, dan Dinas Perhubungan, lalu mengolah dokumentasi menjadi foto, video reels, dan materi edukasi layanan keselamatan bagi masyarakat Bengkulu.
           </p>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-xs md:text-sm text-[#a39e9e]">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-[#a39e9e]">
             <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:size-1.5 before:bg-[#c81e28] before:rounded-full bg-[#120b0d]/70 p-3 rounded border border-white/5">
               <strong className="text-white block font-semibold mb-0.5">
                 Liputan keselamatan jalan
@@ -113,14 +113,14 @@ export function JasaRaharjaSection() {
             </li>
           </ul>
 
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap gap-3 sm:gap-4 items-center">
             <a
               href="https://www.instagram.com/jasaraharja_bengkulu_/"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
                 buttonVariants(),
-                "bg-[#c81e28] hover:bg-[#e62e39] text-white font-bold text-xs uppercase tracking-wider px-6 py-6 rounded transition-all shadow-[0_8px_20px_rgba(200,30,40,0.3)] hover:-translate-y-0.5 inline-flex items-center gap-2"
+                "bg-[#c81e28] hover:bg-[#e62e39] text-white font-bold text-xs uppercase tracking-wider px-5 sm:px-6 py-5 sm:py-6 rounded transition-all shadow-[0_8px_20px_rgba(200,30,40,0.3)] hover:-translate-y-0.5 inline-flex items-center gap-2"
               )}
             >
               <span>Buka Instagram @jasaraharja_bengkulu_</span>
@@ -129,7 +129,7 @@ export function JasaRaharjaSection() {
 
             <a
               href="#kampanye-batik"
-              className="text-xs uppercase tracking-wider text-[#d1cece] hover:text-[#e62e39] underline underline-offset-4 font-semibold transition-colors py-3 px-2"
+              className="text-xs uppercase tracking-wider text-[#d1cece] hover:text-[#e62e39] underline underline-offset-4 font-semibold transition-colors py-2 px-1"
             >
               Lihat Kampanye Batik Besurek ↓
             </a>
@@ -142,31 +142,31 @@ export function JasaRaharjaSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="lg:col-span-5 relative flex justify-center items-center min-h-[480px] group"
+          className="lg:col-span-5 relative flex justify-center items-center min-h-[360px] xs:min-h-[400px] sm:min-h-[460px] lg:min-h-[480px] group overflow-hidden py-4"
         >
           {/* Back Phone: Profile */}
-          <div className="absolute w-[220px] sm:w-[250px] bg-black rounded-[28px] p-2 shadow-[0_20px_40px_rgba(0,0,0,0.8),0_0_0_3px_#261618] overflow-hidden -translate-x-8 -translate-y-6 -rotate-4 z-[1] opacity-85 group-hover:-translate-x-12 group-hover:-translate-y-8 group-hover:-rotate-6 transition-transform duration-500">
+          <div className="absolute w-[170px] xs:w-[200px] sm:w-[240px] bg-black rounded-[22px] sm:rounded-[28px] p-2 shadow-[0_20px_40px_rgba(0,0,0,0.8),0_0_0_3px_#261618] overflow-hidden -translate-x-5 sm:-translate-x-8 -translate-y-4 sm:-translate-y-6 -rotate-4 z-[1] opacity-85 group-hover:-translate-x-7 sm:group-hover:-translate-x-12 group-hover:-translate-y-6 sm:group-hover:-translate-y-8 group-hover:-rotate-6 transition-transform duration-500">
             <Image
               src="/assets/img/jasaraharja/ig-profil.webp"
               alt="Tangkapan layar profil Instagram resmi Jasa Raharja Bengkulu"
               width={720}
               height={1355}
-              className="rounded-[22px] w-full"
+              className="rounded-[18px] sm:rounded-[22px] w-full"
             />
           </div>
 
           {/* Front Phone: Reels */}
-          <div className="relative w-[230px] sm:w-[260px] bg-black rounded-[28px] p-2 shadow-[0_25px_50px_rgba(0,0,0,0.95),0_0_0_3px_#c81e28] overflow-hidden translate-x-8 translate-y-6 rotate-3 z-[2] group-hover:translate-x-12 group-hover:translate-y-8 group-hover:rotate-5 transition-transform duration-500">
+          <div className="relative w-[180px] xs:w-[210px] sm:w-[250px] bg-black rounded-[22px] sm:rounded-[28px] p-2 shadow-[0_25px_50px_rgba(0,0,0,0.95),0_0_0_3px_#c81e28] overflow-hidden translate-x-5 sm:translate-x-8 translate-y-4 sm:translate-y-6 rotate-3 z-[2] group-hover:translate-x-7 sm:group-hover:translate-x-12 group-hover:translate-y-6 sm:group-hover:translate-y-8 group-hover:rotate-5 transition-transform duration-500">
             <Image
               src="/assets/img/jasaraharja/ig-reels.webp"
               alt="Tangkapan layar feed reels kegiatan Jasa Raharja Bengkulu"
               width={720}
               height={1262}
-              className="rounded-[22px] w-full"
+              className="rounded-[18px] sm:rounded-[22px] w-full"
             />
           </div>
 
-          <div className="absolute -bottom-4 font-mono text-[11px] uppercase tracking-wider text-[#e62e39] bg-[#090607]/90 px-3 py-1 rounded border border-[#c81e28]/25 z-[3]">
+          <div className="absolute bottom-0 sm:-bottom-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#e62e39] bg-[#090607]/95 px-3 py-1 rounded border border-[#c81e28]/25 z-[3]">
             Akun resmi @jasaraharja_bengkulu_
           </div>
         </motion.div>
@@ -310,19 +310,19 @@ export function JasaRaharjaSection() {
             <button
               type="button"
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-[#c81e28] text-white p-3 rounded-full transition-all border border-white/10 z-50 hover:scale-110"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/75 hover:bg-[#c81e28] text-white p-2 sm:p-3 rounded-full transition-all border border-white/10 z-50 hover:scale-110"
               aria-label="Foto sebelumnya"
             >
-              <ChevronLeft className="size-6" />
+              <ChevronLeft className="size-5 sm:size-6" />
             </button>
 
             <button
               type="button"
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-[#c81e28] text-white p-3 rounded-full transition-all border border-white/10 z-50 hover:scale-110"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/75 hover:bg-[#c81e28] text-white p-2 sm:p-3 rounded-full transition-all border border-white/10 z-50 hover:scale-110"
               aria-label="Foto selanjutnya"
             >
-              <ChevronRight className="size-6" />
+              <ChevronRight className="size-5 sm:size-6" />
             </button>
 
             {/* Main Lightbox Image & Quote */}

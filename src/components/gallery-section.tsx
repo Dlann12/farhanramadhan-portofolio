@@ -68,7 +68,7 @@ export function GallerySection() {
   }, [lightboxIndex, filteredItems.length]);
 
   return (
-    <section id="dokumentasi" className="max-w-[1240px] mx-auto px-6 py-20 relative z-10">
+    <section id="dokumentasi" className="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-20 relative z-10">
       <div className="flex flex-wrap items-baseline justify-between gap-4 mb-8 border-b border-white/10 pb-4">
         <h2 className="font-anton text-2xl md:text-3xl uppercase tracking-wider text-[#f5f5f7]">
           Dokumentasi Kegiatan
@@ -138,30 +138,30 @@ export function GallerySection() {
             <button
               type="button"
               onClick={handleCloseLightbox}
-              className="fixed top-5 right-5 size-11 rounded-full bg-white/10 hover:bg-[#c81e28] text-white flex items-center justify-center transition-colors z-50"
+              className="fixed top-4 right-4 size-10 md:size-11 rounded-full bg-black/80 hover:bg-[#c81e28] text-white flex items-center justify-center transition-colors z-50 border border-white/20"
               aria-label="Tutup pratinjau foto"
             >
-              <X className="size-6" />
+              <X className="size-5 md:size-6" />
             </button>
 
             {/* Prev Button */}
             <button
               type="button"
               onClick={handlePrev}
-              className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 size-12 rounded-full bg-white/10 hover:bg-[#c81e28] text-white flex items-center justify-center transition-colors z-50"
+              className="fixed left-2 md:left-8 top-1/2 -translate-y-1/2 size-10 md:size-12 rounded-full bg-black/75 hover:bg-[#c81e28] text-white flex items-center justify-center transition-colors z-50 border border-white/10"
               aria-label="Foto sebelumnya"
             >
-              <ChevronLeft className="size-7" />
+              <ChevronLeft className="size-6 md:size-7" />
             </button>
 
             {/* Next Button */}
             <button
               type="button"
               onClick={handleNext}
-              className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 size-12 rounded-full bg-white/10 hover:bg-[#c81e28] text-white flex items-center justify-center transition-colors z-50"
+              className="fixed right-2 md:right-8 top-1/2 -translate-y-1/2 size-10 md:size-12 rounded-full bg-black/75 hover:bg-[#c81e28] text-white flex items-center justify-center transition-colors z-50 border border-white/10"
               aria-label="Foto berikutnya"
             >
-              <ChevronRight className="size-7" />
+              <ChevronRight className="size-6 md:size-7" />
             </button>
 
             {/* Photo Container */}

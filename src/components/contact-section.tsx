@@ -71,8 +71,8 @@ export function ContactSection() {
   };
 
   return (
-    <section id="kontak" className="max-w-[1240px] mx-auto px-6 py-20 border-t border-white/10 relative z-10">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="kontak" className="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-20 border-t border-white/10 relative z-10 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Col: Lead */}
         <motion.div
           initial={{ opacity: 0.95, y: 15 }}
@@ -81,13 +81,13 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="lg:col-span-4"
         >
-          <h2 className="font-anton text-[clamp(2.4rem,4.2vw,3.8rem)] uppercase tracking-wide leading-[0.96] text-white mb-4">
+          <h2 className="font-anton text-3xl sm:text-4xl md:text-5xl uppercase tracking-wide leading-[0.96] text-white mb-3 sm:mb-4">
             Mari Bekerja <br />
             <span className="text-[#e62e39]">
-              Sama <span className="font-bold text-4xl align-middle">+</span>
+              Sama <span className="font-bold text-3xl sm:text-4xl align-middle">+</span>
             </span>
           </h2>
-          <p className="text-sm text-[#a39e9e] leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#a39e9e] leading-relaxed">
             Saya terbuka untuk peran kehumasan, komunikasi publik, dan peliputan kegiatan. Kirim pesan atau hubungi langsung melalui kontak berikut.
           </p>
         </motion.div>
@@ -98,29 +98,29 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="lg:col-span-5 flex flex-col gap-3.5"
+          className="lg:col-span-5 flex flex-col gap-3 sm:gap-3.5"
         >
           {contactList.map((contact) => {
             const Icon = contact.icon;
             return (
               <div
                 key={contact.key}
-                className="flex items-center justify-between p-3.5 px-4 bg-[#120b0d] hover:bg-[#1c1013] border border-[#c81e28]/20 hover:border-[#c81e28] rounded-lg transition-all group"
+                className="flex items-center justify-between p-3 sm:p-3.5 px-3.5 sm:px-4 bg-[#120b0d] hover:bg-[#1c1013] border border-[#c81e28]/20 hover:border-[#c81e28] rounded-lg transition-all group overflow-hidden"
               >
                 <a
                   href={contact.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3.5 flex-grow"
+                  className="flex items-center gap-3 sm:gap-3.5 flex-grow min-w-0"
                 >
-                  <div className="size-9 rounded-full bg-[#c81e28]/15 border border-[#c81e28]/30 flex items-center justify-center text-[#e62e39] group-hover:scale-110 transition-transform">
-                    <Icon className="size-4" />
+                  <div className="size-8 sm:size-9 shrink-0 rounded-full bg-[#c81e28]/15 border border-[#c81e28]/30 flex items-center justify-center text-[#e62e39] group-hover:scale-110 transition-transform">
+                    <Icon className="size-3.5 sm:size-4" />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col min-w-0 pr-2">
                     <span className="text-[10px] uppercase font-bold tracking-widest text-[#e62e39]">
                       {contact.label}
                     </span>
-                    <span className="text-xs md:text-sm font-medium text-white group-hover:text-[#e62e39] transition-colors">
+                    <span className="text-xs sm:text-sm font-medium text-white group-hover:text-[#e62e39] transition-colors truncate">
                       {contact.display}
                     </span>
                   </div>
@@ -129,7 +129,7 @@ export function ContactSection() {
                 <button
                   type="button"
                   onClick={() => handleCopy(contact.key, contact.value)}
-                  className="p-2 text-[#a39e9e] hover:text-white transition-colors ml-2"
+                  className="p-2 text-[#a39e9e] hover:text-white transition-colors ml-2 shrink-0"
                   title="Salin ke clipboard"
                   aria-label={`Salin ${contact.label}`}
                 >

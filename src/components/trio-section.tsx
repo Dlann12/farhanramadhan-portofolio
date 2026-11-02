@@ -54,7 +54,7 @@ export function TrioSection() {
   ];
 
   return (
-    <section id="pendidikan" className="max-w-[1240px] mx-auto px-6 py-16 relative z-10">
+    <section id="pendidikan" className="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-16 relative z-10 overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Column 1: Pendidikan & Keahlian */}
         <motion.div

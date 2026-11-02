@@ -17,7 +17,7 @@ export function ExperienceSection() {
   };
 
   return (
-    <section id="pengalaman" className="max-w-[1240px] mx-auto px-6 py-16 relative z-10">
+    <section id="pengalaman" className="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-16 relative z-10 overflow-hidden">
       <div className="flex flex-wrap items-baseline justify-between gap-4 mb-8 border-b border-white/10 pb-3">
         <h2 className="font-anton text-2xl md:text-3xl uppercase tracking-wider text-[#f5f5f7]">
           Pengalaman Kerja
