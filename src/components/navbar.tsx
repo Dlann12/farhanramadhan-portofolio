@@ -21,10 +21,11 @@ export function Navbar() {
   };
 
   const navLinks = [
+    { label: "Karya Visual", href: "#kampanye-batik" },
+    { label: "Video & Reels", href: "#humas" },
     { label: "Pengalaman", href: "#pengalaman" },
-    { label: "Jasa Raharja", href: "#humas" },
-    { label: "Pendidikan", href: "#pendidikan" },
-    { label: "Dokumentasi", href: "#dokumentasi" },
+    { label: "Workflow & Tools", href: "#pendidikan" },
+    { label: "Galeri Foto", href: "#dokumentasi" },
     { label: "Kontak", href: "#kontak" },
   ];
 
@@ -34,19 +35,22 @@ export function Navbar() {
         {/* Brand */}
         <Link
           href="#beranda"
-          className="flex flex-col text-xs uppercase tracking-[0.14em] font-bold leading-tight group"
+          className="flex items-center gap-2.5 group"
         >
-          <span className="text-[#e62e39] group-hover:text-white transition-colors">Humas</span>
-          <span className="text-[#f5f5f7]">Komunikasi Publik</span>
+          <div className="size-2 rounded-full bg-[#c81e28] animate-pulse" />
+          <div className="flex flex-col text-xs uppercase tracking-[0.14em] font-bold leading-tight">
+            <span className="text-[#f5f5f7] group-hover:text-[#e62e39] transition-colors">Farhan Ramadhan</span>
+            <span className="text-[10px] text-[#a39e9e] font-mono tracking-wider font-normal">Visual Creator • Editor</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Navigasi Utama">
+        <nav className="hidden md:flex items-center gap-7" aria-label="Navigasi Utama">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs uppercase tracking-[0.1em] text-[#a39e9e] hover:text-white font-medium transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c81e28] hover:after:w-full after:transition-all"
+              className="text-xs uppercase tracking-[0.08em] text-[#a39e9e] hover:text-white font-medium transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#c81e28] hover:after:w-full after:transition-all"
             >
               {link.label}
             </Link>
@@ -63,7 +67,7 @@ export function Navbar() {
               "border-white/10 hover:border-[#c81e28] bg-transparent hover:bg-[#c81e28]/15 text-xs uppercase tracking-wider font-semibold text-[#f5f5f7] rounded-sm transition-all h-9 px-4"
             )}
           >
-            Terbuka untuk peluang <span className="text-[#e62e39] ml-1 font-bold">+</span>
+            Kolaborasi Visual <span className="text-[#e62e39] ml-1 font-bold">+</span>
           </Link>
         </div>
 

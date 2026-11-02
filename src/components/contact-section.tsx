@@ -81,14 +81,18 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="lg:col-span-4"
         >
+          <div className="flex items-center gap-2 mb-2">
+            <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-[11px] font-mono tracking-widest uppercase text-emerald-400 font-semibold">Available for Projects & Collaboration</span>
+          </div>
           <h2 className="font-anton text-3xl sm:text-4xl md:text-5xl uppercase tracking-wide leading-[0.96] text-white mb-3 sm:mb-4">
-            Mari Bekerja <br />
+            Mulai Proyek <br />
             <span className="text-[#e62e39]">
-              Sama <span className="font-bold text-3xl sm:text-4xl align-middle">+</span>
+              Visual Anda <span className="font-bold text-3xl sm:text-4xl align-middle">+</span>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-[#a39e9e] leading-relaxed">
-            Saya terbuka untuk peran kehumasan, komunikasi publik, dan peliputan kegiatan. Kirim pesan atau hubungi langsung melalui kontak berikut.
+            Terbuka untuk kolaborasi creative photoshoot, produksi & editing video reels / branding instansi, peliputan visual lapangan, dan peran humas kreatif. Hubungi langsung melalui kanal di bawah.
           </p>
         </motion.div>
 
@@ -154,7 +158,10 @@ export function ContactSection() {
         >
           <CardContainer className="inter-var">
             <CardBody className="bg-[#120b0d] relative group/card border-[#c81e28]/25 w-auto sm:w-[260px] h-auto rounded-xl p-4 border">
-              <CardItem translateZ="50" className="w-full">
+              <CardItem translateZ="50" className="w-full relative">
+                <div className="absolute top-2 left-2 z-10 bg-black/70 backdrop-blur-sm border border-white/10 px-2 py-0.5 rounded text-[9px] font-mono text-[#e62e39]">
+                  FRAME #01 · 50MM
+                </div>
                 <Image
                   src="/assets/img/farhan-formal.jpg"
                   alt="Potret formal Farhan Ramadhan, S.I.Kom"
@@ -175,7 +182,7 @@ export function ContactSection() {
                   as="p"
                   className="text-[10px] uppercase tracking-widest text-[#e62e39] font-semibold mt-0.5"
                 >
-                  Humas &amp; Komunikasi Publik
+                  Fotografer · Video Editor · Visual Storyteller
                 </CardItem>
               </div>
             </CardBody>

@@ -19,11 +19,17 @@ export function ExperienceSection() {
   return (
     <section id="pengalaman" className="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-16 relative z-10 overflow-hidden">
       <div className="flex flex-wrap items-baseline justify-between gap-4 mb-8 border-b border-white/10 pb-3">
-        <h2 className="font-anton text-2xl md:text-3xl uppercase tracking-wider text-[#f5f5f7]">
-          Pengalaman Kerja
-        </h2>
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+            <span className="size-1.5 rounded-full bg-[#e62e39]" />
+            <span className="text-[10px] font-mono tracking-widest uppercase text-[#e62e39]">Production &amp; Field Record</span>
+          </div>
+          <h2 className="font-anton text-2xl md:text-3xl uppercase tracking-wider text-[#f5f5f7]">
+            Pengalaman Produksi &amp; Liputan
+          </h2>
+        </div>
         <p className="text-xs text-[#716c6d]">
-          Pilih kartu untuk melihat rincian tugas dan dokumentasinya.
+          Pilih kartu untuk melihat rincian tugas visual, editing, dan dokumentasinya.
         </p>
       </div>
 

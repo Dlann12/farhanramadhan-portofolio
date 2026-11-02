@@ -13,7 +13,10 @@ import {
   ChevronLeft,
   ChevronRight,
   Quote,
-  ShieldCheck,
+  Camera,
+  Film,
+  Play,
+  Sliders,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -69,47 +72,51 @@ export function JasaRaharjaSection() {
           className="lg:col-span-7 flex flex-col"
         >
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-widest text-[#e62e39] font-bold px-2.5 py-1 rounded bg-[#c81e28]/10 border border-[#c81e28]/25">
-              <ShieldCheck className="size-3.5 text-[#e62e39]" />
-              Pengalaman Terbaru & Kehumasan BUMN
+            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-widest text-[#e62e39] font-mono font-bold px-2.5 py-1 rounded bg-[#c81e28]/10 border border-[#c81e28]/25">
+              <Film className="size-3.5 text-[#e62e39]" />
+              CREATIVE DIRECTION · VIDEO EDITING · HUMAS
             </span>
           </div>
 
           <h2 className="font-anton text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-wide leading-none mb-2 text-white">
-            Humas <span className="text-[#e62e39]">Jasa Raharja</span>
+            Karya Visual &amp; Reels: <span className="text-[#e62e39]">Jasa Raharja</span>
           </h2>
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#a39e9e] mb-4 sm:mb-6">
             PT Jasa Raharja, Kantor Wilayah Bengkulu
           </p>
 
           <p className="text-xs sm:text-sm md:text-base text-[#d1cece] leading-relaxed mb-6">
-            Mengelola publikasi kegiatan kantor wilayah lewat akun resmi Instagram. Saya hadir langsung di lapangan bersama mitra strategis seperti Kepolisian, Samsat, dan Dinas Perhubungan, lalu mengolah dokumentasi menjadi foto, video reels, dan materi edukasi layanan keselamatan bagi masyarakat Bengkulu.
+            Mengelola dan memproduksi konten audio-visual resmi akun Instagram <strong className="text-white">@jasaraharja_bengkulu_</strong>. Bertindak langsung sebagai juru kamera dan video editor reels: merangkai liputan operasi lalu lintas bersama Kepolisian, penyerahan santunan cepat, hingga kampanye photoshoot kebudayaan Bengkulu.
           </p>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-[#a39e9e]">
             <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:size-1.5 before:bg-[#c81e28] before:rounded-full bg-[#120b0d]/70 p-3 rounded border border-white/5">
-              <strong className="text-white block font-semibold mb-0.5">
-                Liputan keselamatan jalan
+              <strong className="text-white block font-semibold mb-0.5 flex items-center gap-1.5">
+                <Film className="size-3.5 text-[#e62e39]" />
+                Video Editing Reels (9:16)
               </strong>
-              Sosialisasi keselamatan transportasi dan Operasi Patuh Nala 2026.
+              Pacing cut dinamis, beat matching musik, dan motion subtitle edukatif.
             </li>
             <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:size-1.5 before:bg-[#c81e28] before:rounded-full bg-[#120b0d]/70 p-3 rounded border border-white/5">
-              <strong className="text-white block font-semibold mb-0.5">
-                Penyerahan santunan
+              <strong className="text-white block font-semibold mb-0.5 flex items-center gap-1.5">
+                <Camera className="size-3.5 text-[#e62e39]" />
+                Photoshoot Budaya &amp; Fashion
               </strong>
-              Dokumentasi santunan cepat bagi korban dan ahli waris kecelakaan lalu lintas.
+              Konsep visual Hari Batik Nasional &amp; Batik Besurek di Benteng Marlborough.
             </li>
             <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:size-1.5 before:bg-[#c81e28] before:rounded-full bg-[#120b0d]/70 p-3 rounded border border-white/5">
-              <strong className="text-white block font-semibold mb-0.5">
-                Edukasi layanan publik
+              <strong className="text-white block font-semibold mb-0.5 flex items-center gap-1.5">
+                <Sliders className="size-3.5 text-[#e62e39]" />
+                Color Grading &amp; Desain
               </strong>
-              Konten sosialisasi JASFREN, cek sisa plafon rawat jalan, dan etika berkendara.
+              Tone grading serasi, poster layanan JASFREN, dan sorotan profil resmi.
             </li>
             <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:size-1.5 before:bg-[#c81e28] before:rounded-full bg-[#120b0d]/70 p-3 rounded border border-white/5">
-              <strong className="text-white block font-semibold mb-0.5">
-                Kegiatan & event publik
+              <strong className="text-white block font-semibold mb-0.5 flex items-center gap-1.5">
+                <Sparkles className="size-3.5 text-[#e62e39]" />
+                Fotojurnalistik Empatik
               </strong>
-              Samsat Keliling di Car Free Day dan Kapolda Cup Road Race Championship 2026.
+              Dokumentasi santunan jemput bola korban kecelakaan dan kegiatan publik.
             </li>
           </ul>
 
@@ -131,7 +138,7 @@ export function JasaRaharjaSection() {
               href="#kampanye-batik"
               className="text-xs uppercase tracking-wider text-[#d1cece] hover:text-[#e62e39] underline underline-offset-4 font-semibold transition-colors py-2 px-1"
             >
-              Lihat Kampanye Batik Besurek ↓
+              Eksplorasi Photoshoot Batik ↓
             </a>
           </div>
         </motion.div>
@@ -155,7 +162,7 @@ export function JasaRaharjaSection() {
             />
           </div>
 
-          {/* Front Phone: Reels */}
+          {/* Front Phone: Reels with Play Button & 9:16 Tag */}
           <div className="relative w-[180px] xs:w-[210px] sm:w-[250px] bg-black rounded-[22px] sm:rounded-[28px] p-2 shadow-[0_25px_50px_rgba(0,0,0,0.95),0_0_0_3px_#c81e28] overflow-hidden translate-x-5 sm:translate-x-8 translate-y-4 sm:translate-y-6 rotate-3 z-[2] group-hover:translate-x-7 sm:group-hover:translate-x-12 group-hover:translate-y-6 sm:group-hover:translate-y-8 group-hover:rotate-5 transition-transform duration-500">
             <Image
               src="/assets/img/jasaraharja/ig-reels.webp"
@@ -164,10 +171,22 @@ export function JasaRaharjaSection() {
               height={1262}
               className="rounded-[18px] sm:rounded-[22px] w-full"
             />
+
+            {/* Video Play Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="size-11 sm:size-12 rounded-full bg-black/65 border border-white/30 backdrop-blur-sm flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#c81e28] transition-all">
+                <Play className="size-5 fill-white ml-0.5" />
+              </div>
+            </div>
+
+            {/* 9:16 Reels Badge */}
+            <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm px-2 py-0.5 rounded text-[9px] font-mono uppercase tracking-wider text-white border border-white/10">
+              9:16 REELS EDIT
+            </div>
           </div>
 
           <div className="absolute bottom-0 sm:-bottom-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#e62e39] bg-[#090607]/95 px-3 py-1 rounded border border-[#c81e28]/25 z-[3]">
-            Akun resmi @jasaraharja_bengkulu_
+            Feed &amp; Video Reels @jasaraharja_bengkulu_
           </div>
         </motion.div>
       </div>
@@ -179,20 +198,20 @@ export function JasaRaharjaSection() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <div className="inline-flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#e62e39] font-bold px-3 py-1 rounded-full bg-[#c81e28]/10 border border-[#c81e28]/30">
-                  <Sparkles className="size-3.5 text-[#e62e39]" />
-                  Kampanye Kreatif & Dokumentasi Budaya
+                <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#e62e39] font-mono font-bold px-3 py-1 rounded-full bg-[#c81e28]/10 border border-[#c81e28]/30">
+                  <Camera className="size-3.5 text-[#e62e39]" />
+                  PHOTOSHOOT EDITORIAL &amp; KAMPANYE BUDAYA
                 </span>
               </div>
               <h3 className="font-anton text-3xl sm:text-4xl lg:text-5xl uppercase tracking-wide text-white">
                 Hari Batik Nasional: <span className="text-[#e62e39]">Batik Besurek Bengkulu</span>
               </h3>
               <p className="text-xs sm:text-sm text-[#a39e9e] mt-2 flex flex-wrap items-center gap-4">
-                <span className="inline-flex items-center gap-1.5">
+                <span className="inline-flex items-center gap-1.5 font-mono">
                   <MapPin className="size-3.5 text-[#e62e39]" />
                   Benteng Marlborough, Bengkulu
                 </span>
-                <span className="inline-flex items-center gap-1.5">
+                <span className="inline-flex items-center gap-1.5 font-mono">
                   <Calendar className="size-3.5 text-[#e62e39]" />
                   PT Jasa Raharja Kantor Wilayah Bengkulu
                 </span>
@@ -200,12 +219,12 @@ export function JasaRaharjaSection() {
             </div>
 
             <p className="text-xs md:text-sm text-[#d1cece] max-w-md leading-relaxed">
-              Karya dokumentasi visual dan penulisan narasi budaya resmi yang diproduksi untuk publikasi PT Jasa Raharja Bengkulu, merayakan keanggunan motif kaligrafi dan Rafflesia khas Besurek di situs cagar budaya bersejarah.
+              Karya fotografi konsep dan penulisan narasi budaya resmi yang diproduksi untuk publikasi PT Jasa Raharja Bengkulu, merayakan keanggunan motif kaligrafi dan Rafflesia khas Besurek di situs cagar budaya bersejarah.
             </p>
           </div>
         </div>
 
-        {/* 6 Photos Grid */}
+        {/* 6 Photos Grid with Viewfinder Corners */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {BATIK_CAMPAIGN_ITEMS.map((item, index) => (
             <motion.div
@@ -226,7 +245,7 @@ export function JasaRaharjaSection() {
                     handleOpenLightbox(index);
                   }
                 }}
-                className="w-full text-left bg-[#120b0d] hover:bg-[#1a0f12] border border-[#c81e28]/25 hover:border-[#c81e28] rounded-xl overflow-hidden transition-all duration-300 flex flex-col h-full cursor-pointer hover:-translate-y-1.5 hover:shadow-[0_16px_32px_rgba(0,0,0,0.8),0_0_20px_rgba(200,30,40,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e62e39]"
+                className="w-full text-left bg-[#120b0d] hover:bg-[#1a0f12] border border-[#c81e28]/25 hover:border-[#c81e28] rounded-xl overflow-hidden transition-all duration-300 flex flex-col h-full cursor-pointer hover:-translate-y-1.5 hover:shadow-[0_16px_32px_rgba(0,0,0,0.8),0_0_20px_rgba(200,30,40,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e62e39] relative"
               >
                 {/* Photo Container */}
                 <div className="relative aspect-[3/4] w-full bg-black overflow-hidden">
@@ -241,13 +260,24 @@ export function JasaRaharjaSection() {
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#090607] via-transparent to-black/30 opacity-70 group-hover:opacity-50 transition-opacity" />
 
+                  {/* Viewfinder Framing Marks */}
+                  <div className="absolute top-2.5 left-2.5 size-3 border-t border-l border-white/40 pointer-events-none z-10" />
+                  <div className="absolute top-2.5 right-2.5 size-3 border-t border-r border-white/40 pointer-events-none z-10" />
+                  <div className="absolute bottom-2.5 left-2.5 size-3 border-b border-l border-white/40 pointer-events-none z-10" />
+                  <div className="absolute bottom-2.5 right-2.5 size-3 border-b border-r border-white/40 pointer-events-none z-10" />
+
                   {/* Card Index Badge */}
-                  <div className="absolute top-3 left-3 bg-black/75 backdrop-blur-sm border border-white/10 px-2.5 py-1 rounded text-[11px] font-mono text-[#e62e39] font-bold">
-                    0{index + 1} / 06
+                  <div className="absolute top-3.5 left-3.5 bg-black/80 backdrop-blur-sm border border-white/10 px-2 py-0.5 rounded text-[10px] font-mono text-[#e62e39] font-bold z-10">
+                    CAM 0{index + 1}
+                  </div>
+
+                  {/* Camera Telemetry Tag */}
+                  <div className="absolute bottom-3.5 left-3.5 bg-black/80 backdrop-blur-sm border border-white/10 px-2 py-0.5 rounded text-[10px] font-mono text-white/80 z-10">
+                    <span className="text-[#e62e39] font-semibold">{item.lens}</span> · {item.iso}
                   </div>
 
                   {/* Zoom Preview Pill on Hover */}
-                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#c81e28] text-white p-2 rounded-full shadow-lg">
+                  <div className="absolute top-3.5 right-3.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#c81e28] text-white p-2 rounded-full shadow-lg z-10">
                     <ZoomIn className="size-4" />
                   </div>
                 </div>
@@ -255,6 +285,14 @@ export function JasaRaharjaSection() {
                 {/* Content Footer */}
                 <div className="p-5 flex-1 flex flex-col justify-between bg-[#120b0d] border-t border-white/5">
                   <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#e62e39]">
+                        {item.ratio}
+                      </span>
+                      <span className="text-[10px] font-mono text-[#716c6d]">
+                        {item.location}
+                      </span>
+                    </div>
                     <h4 className="font-anton text-lg tracking-wide uppercase text-white group-hover:text-[#e62e39] transition-colors mb-2">
                       {item.title}
                     </h4>
@@ -265,8 +303,8 @@ export function JasaRaharjaSection() {
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-[#716c6d]">
-                    <span className="uppercase tracking-wider">Benteng Marlborough</span>
-                    <span className="text-[#e62e39] font-medium group-hover:underline">Perbesar foto →</span>
+                    <span className="uppercase tracking-wider font-mono">Batik Besurek Bengkulu</span>
+                    <span className="text-[#e62e39] font-medium group-hover:underline">Buka Frame Foto →</span>
                   </div>
                 </div>
               </div>
@@ -275,7 +313,7 @@ export function JasaRaharjaSection() {
         </div>
       </div>
 
-      {/* 3. Lightbox Modal */}
+      {/* 3. Lightbox Modal with Camera HUD & Telemetry */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
@@ -287,12 +325,12 @@ export function JasaRaharjaSection() {
           >
             {/* Top Toolbar */}
             <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-50">
-              <div className="text-white">
+              <div className="text-white flex items-center gap-3">
                 <span className="font-anton text-base sm:text-lg tracking-wider uppercase">
                   {BATIK_CAMPAIGN_ITEMS[lightboxIndex].title}
                 </span>
-                <span className="text-xs text-[#a39e9e] ml-3 hidden sm:inline">
-                  {lightboxIndex + 1} dari {BATIK_CAMPAIGN_ITEMS.length}
+                <span className="text-xs font-mono text-[#e62e39] bg-[#c81e28]/20 px-2 py-0.5 rounded border border-[#c81e28]/30 hidden sm:inline">
+                  FRAME 0{lightboxIndex + 1} / 0{BATIK_CAMPAIGN_ITEMS.length}
                 </span>
               </div>
 
@@ -330,7 +368,7 @@ export function JasaRaharjaSection() {
               className="relative max-w-4xl max-h-[85vh] w-full flex flex-col items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative w-full max-h-[68vh] aspect-[3/4] sm:aspect-[4/5] flex items-center justify-center">
+              <div className="relative w-full max-h-[64vh] aspect-[3/4] sm:aspect-[4/5] flex items-center justify-center">
                 <Image
                   src={BATIK_CAMPAIGN_ITEMS[lightboxIndex].src}
                   alt={BATIK_CAMPAIGN_ITEMS[lightboxIndex].alt}
@@ -340,13 +378,27 @@ export function JasaRaharjaSection() {
                 />
               </div>
 
+              {/* Camera Metadata Telemetry Pill */}
+              <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-mono text-[11px] text-white/90 bg-[#120b0d]/90 px-4 py-1.5 rounded-full border border-white/10">
+                <span className="flex items-center gap-1 text-[#e62e39] font-bold">
+                  <Camera className="size-3" />
+                  {BATIK_CAMPAIGN_ITEMS[lightboxIndex].lens}
+                </span>
+                <span className="text-white/30">·</span>
+                <span>{BATIK_CAMPAIGN_ITEMS[lightboxIndex].iso}</span>
+                <span className="text-white/30">·</span>
+                <span>{BATIK_CAMPAIGN_ITEMS[lightboxIndex].ratio}</span>
+                <span className="text-white/30">·</span>
+                <span className="text-white/70">{BATIK_CAMPAIGN_ITEMS[lightboxIndex].location}</span>
+              </div>
+
               {/* Caption Card */}
-              <div className="mt-4 bg-[#120b0d]/90 border border-[#c81e28]/30 p-4 rounded-lg max-w-2xl text-center shadow-2xl">
+              <div className="mt-2 bg-[#120b0d]/90 border border-[#c81e28]/30 p-3 sm:p-4 rounded-lg max-w-2xl text-center shadow-2xl">
                 <p className="text-xs sm:text-sm text-[#f5f5f7] italic leading-relaxed">
                   &ldquo;{BATIK_CAMPAIGN_ITEMS[lightboxIndex].caption}&rdquo;
                 </p>
-                <p className="text-[11px] text-[#a39e9e] uppercase tracking-wider mt-2 font-mono">
-                  Dokumentasi Resmi PT Jasa Raharja (Persero) Wilayah Bengkulu — Benteng Marlborough
+                <p className="text-[10px] text-[#a39e9e] uppercase tracking-wider mt-1.5 font-mono">
+                  Sesi Photoshoot Resmi PT Jasa Raharja (Persero) Wilayah Bengkulu — Benteng Marlborough
                 </p>
               </div>
             </div>

@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MapPin, ArrowDown } from "lucide-react";
+import { MapPin, ArrowDown, Camera, Film, Sparkles } from "lucide-react";
 import { Spotlight } from "@/components/aceternity/spotlight";
 import { SparklesCore } from "@/components/aceternity/sparkles";
 
@@ -18,9 +18,33 @@ export function HeroSection() {
   return (
     <section
       id="beranda"
-      className="relative max-w-[1240px] mx-auto px-4 sm:px-6 pt-6 sm:pt-10 lg:pt-12 pb-12 sm:pb-16 overflow-hidden z-10 lg:min-h-[clamp(680px,92vh,960px)] lg:flex lg:flex-col lg:justify-end"
+      className="relative max-w-[1240px] mx-auto px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-14 pb-12 sm:pb-16 overflow-hidden z-10 lg:min-h-[clamp(700px,94vh,980px)] lg:flex lg:flex-col lg:justify-end"
       aria-labelledby="hero-name"
     >
+      {/* Viewfinder Telemetry Overlay (Photographer / Cinema HUD) */}
+      <div
+        className="hidden sm:flex items-center justify-between font-mono text-[10px] text-white/50 uppercase tracking-widest absolute top-4 left-6 right-6 z-[4] select-none pointer-events-none"
+        aria-hidden="true"
+      >
+        <div className="flex items-center gap-2">
+          <span className="size-2 rounded-full bg-[#c81e28] animate-pulse" />
+          <span className="text-white/80 font-bold">REC [●] 00:04:22:15</span>
+          <span className="text-[#e62e39]/60">·</span>
+          <span>4K UHD 60FPS</span>
+          <span className="text-[#e62e39]/60">·</span>
+          <span className="text-[#e62e39]">PRORES RAW</span>
+        </div>
+        <div className="flex items-center gap-2 text-white/70">
+          <span>ISO 100</span>
+          <span className="text-[#e62e39]/60">·</span>
+          <span>50MM F/1.8</span>
+          <span className="text-[#e62e39]/60">·</span>
+          <span>1/250s</span>
+          <span className="text-[#e62e39]/60">·</span>
+          <span className="border border-white/20 px-1 py-0.5 rounded text-[9px]">9:16 / 4:5</span>
+        </div>
+      </div>
+
       {/* Aceternity Spotlight Effect */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#e62e39" />
 
@@ -41,9 +65,9 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Giant Background Word: PORTFOLIO */}
+      {/* Giant Background Word: PORTFOLIO / EXPOSURE */}
       <div
-        className="absolute top-0 sm:top-2 left-1/2 -translate-x-1/2 font-anton text-[clamp(4.2rem,16vw,16.5rem)] leading-[0.88] uppercase text-[#7a0e14] opacity-35 sm:opacity-45 select-none pointer-events-none z-[1] text-center w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_45%,rgba(0,0,0,0.05)_95%)]"
+        className="absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 font-anton text-[clamp(4.2rem,16vw,16.5rem)] leading-[0.88] uppercase text-[#7a0e14] opacity-35 sm:opacity-45 select-none pointer-events-none z-[1] text-center w-full [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_45%,rgba(0,0,0,0.05)_95%)]"
         aria-hidden="true"
       >
         Portfolio
@@ -62,7 +86,7 @@ export function HeroSection() {
       </div>
 
       {/* === MOBILE ONLY: Top Header (Greeting + Name) === */}
-      <div className="lg:hidden relative z-10 text-center mb-4 pt-2">
+      <div className="lg:hidden relative z-10 text-center mb-3 pt-2">
         <p className="font-script text-4xl sm:text-5xl text-[#e62e39] leading-none mb-1 -rotate-2 select-none">
           Halo, saya
         </p>
@@ -73,13 +97,14 @@ export function HeroSection() {
           Farhan Ramadhan
         </h1>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c81e28]/15 border border-[#c81e28]/30 mb-2">
+          <Camera className="size-3 text-[#e62e39]" />
           <span className="text-xs font-bold uppercase tracking-wider text-[#e62e39]">
-            Humas &amp; Komunikasi Publik
+            Fotografer &amp; Video Editor
           </span>
         </div>
         <div className="flex items-center justify-center gap-1.5 text-xs text-[#a39e9e]">
           <MapPin className="size-3.5 text-[#e62e39]" />
-          <span>Berbasis di Bengkulu</span>
+          <span>Bengkulu, Indonesia</span>
         </div>
       </div>
 
@@ -117,26 +142,28 @@ export function HeroSection() {
             >
               Farhan <br /> Ramadhan
             </h1>
-            <p className="text-base md:text-lg font-bold uppercase tracking-[0.12em] text-[#e62e39] mb-3">
-              Humas &amp; Komunikasi Publik
-            </p>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xs uppercase tracking-widest font-mono text-[#e62e39] font-bold px-2 py-0.5 rounded bg-[#c81e28]/15 border border-[#c81e28]/30">
+                Fotografer · Video Editor · Humas
+              </span>
+            </div>
           </div>
 
           <p className="text-xs sm:text-sm md:text-base text-[#d1cece] leading-relaxed mb-4">
-            Lulusan Ilmu Komunikasi Universitas Sriwijaya. Saya meliput kegiatan, menulis press release, mendokumentasikan lewat foto dan video, lalu memastikan informasinya sampai ke masyarakat dengan tepat.
+            Lulusan Ilmu Komunikasi Universitas Sriwijaya. Saya menggabungkan kepekaan mata fotografer, ritme editing video bertempo dinamis, dan narasi komunikasi publik untuk melahirkan karya audio-visual yang bercerita dan sampai ke hati masyarakat.
           </p>
 
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-white/5">
             <div className="hidden lg:inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#e62e39]">
               <MapPin className="size-4" />
               <span>Berbasis di Bengkulu</span>
             </div>
 
             <Link
-              href="#pengalaman"
+              href="#kampanye-batik"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-[#e62e39] hover:text-white transition-colors py-1 group"
             >
-              <span>Eksplorasi Portofolio</span>
+              <span>Lihat Portofolio Visual</span>
               <ArrowDown className="size-3.5 group-hover:translate-y-0.5 transition-transform" />
             </Link>
           </div>
@@ -150,28 +177,25 @@ export function HeroSection() {
           className="lg:col-span-6 lg:justify-self-end lg:max-w-[340px] bg-gradient-to-br from-[#090607]/95 to-[#090607]/75 p-5 sm:p-6 rounded-lg backdrop-blur-md border-r-2 border-[#c81e28] shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
         >
           <div className="flex items-start gap-3 mb-4">
-            <span
-              className="size-6 shrink-0 rounded-full border border-[#c81e28] flex items-center justify-center text-[#e62e39] text-sm font-bold mt-0.5"
-              aria-hidden="true"
-            >
-              +
-            </span>
+            <div className="size-6 shrink-0 rounded-full bg-[#c81e28]/20 border border-[#c81e28] flex items-center justify-center text-[#e62e39] text-xs font-bold mt-0.5">
+              <Camera className="size-3.5" />
+            </div>
             <p className="text-xs sm:text-sm font-semibold leading-snug text-[#f5f5f7]">
-              Mengubah kegiatan menjadi informasi yang sampai ke publik
+              Membingkai momen menjadi karya audio-visual yang menggerakkan
             </p>
           </div>
           <ul className="flex flex-col gap-2.5 text-xs text-[#a39e9e]">
             <li className="flex items-center gap-2">
-              <span className="text-[#e62e39] font-bold">+</span>
-              Peliputan &amp; Press Release
+              <Camera className="size-3.5 text-[#e62e39] shrink-0" />
+              <span>Fotografi Lapangan &amp; Photoshoot Adat</span>
             </li>
             <li className="flex items-center gap-2">
-              <span className="text-[#e62e39] font-bold">+</span>
-              Foto &amp; Video Kegiatan
+              <Film className="size-3.5 text-[#e62e39] shrink-0" />
+              <span>Video Editing Reels (9:16) &amp; Pacing</span>
             </li>
             <li className="flex items-center gap-2">
-              <span className="text-[#e62e39] font-bold">+</span>
-              Pelayanan Publik &amp; Kehumasan
+              <Sparkles className="size-3.5 text-[#e62e39] shrink-0" />
+              <span>Color Grading &amp; Komunikasi Visual</span>
             </li>
           </ul>
         </motion.div>

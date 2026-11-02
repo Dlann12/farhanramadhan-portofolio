@@ -20,8 +20,8 @@ const mrsSaintDelafield = Mrs_Saint_Delafield({
 });
 
 export const metadata: Metadata = {
-  title: "Farhan Ramadhan | Humas & Komunikasi Publik",
-  description: "Portofolio Farhan Ramadhan, S.I.Kom. Lulusan Ilmu Komunikasi Universitas Sriwijaya, berpengalaman di bidang kehumasan, peliputan, dan pelayanan publik. Humas Jasa Raharja Kantor Wilayah Bengkulu.",
+  title: "Farhan Ramadhan | Fotografer, Video Editor & Visual Storyteller",
+  description: "Portofolio visual Farhan Ramadhan, S.I.Kom. Fotografer, video editor short-form (Reels/TikTok), dan visual media specialist berpengalaman di bidang kehumasan serta publikasi digital instansi.",
 };
 
 export default function RootLayout({
