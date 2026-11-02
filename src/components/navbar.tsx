@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleCtaClick = () => {
+  const handleCtaClick = (_e?: React.MouseEvent) => {
     confetti({
       particleCount: 50,
       spread: 60,
@@ -102,9 +102,9 @@ export function Navbar() {
               <div className="pt-2 border-t border-white/10">
                 <Link
                   href="#kontak"
-                  onClick={(e) => {
+                  onClick={() => {
                     setMobileMenuOpen(false);
-                    handleCtaClick(e);
+                    handleCtaClick();
                   }}
                   className={cn(
                     buttonVariants(),
