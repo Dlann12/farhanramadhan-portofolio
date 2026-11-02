@@ -74,14 +74,14 @@ export function HeroSection() {
       </div>
 
       {/* === DESKTOP ONLY: Centered Absolute Portrait Cutout (lg and up) === */}
-      <div className="hidden lg:flex absolute bottom-0 left-1/2 -translate-x-1/2 z-[3] pointer-events-none w-auto max-h-[clamp(560px,88vh,840px)] justify-center">
+      <div className="hidden lg:flex absolute bottom-0 left-1/2 -translate-x-1/2 z-[3] pointer-events-none w-auto max-h-[clamp(560px,78vh,740px)] justify-center [mask-image:linear-gradient(to_bottom,black_86%,transparent_100%)]">
         <Image
-          src="/assets/img/farhan-hero.webp"
+          src="/assets/img/farhan-hero-half.webp"
           alt="Farhan Ramadhan mengenakan setelan jas formal hitam"
           width={682}
-          height={1024}
+          height={580}
           priority
-          className="max-h-[clamp(560px,88vh,840px)] w-auto object-contain filter contrast-[104%] brightness-[98%] drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)]"
+          className="max-h-[clamp(560px,78vh,740px)] w-auto object-contain filter contrast-[104%] brightness-[98%] drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)]"
         />
       </div>
 
@@ -110,14 +110,14 @@ export function HeroSection() {
 
       {/* === MOBILE ONLY: Unobstructed Hero Portrait Showcase === */}
       <div className="lg:hidden relative z-[3] flex justify-center my-2 pointer-events-none">
-        <div className="relative w-auto max-h-[420px] sm:max-h-[480px] flex justify-center">
+        <div className="relative w-auto max-h-[300px] sm:max-h-[360px] flex justify-center [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
           <Image
-            src="/assets/img/farhan-hero.webp"
+            src="/assets/img/farhan-hero-half.webp"
             alt="Farhan Ramadhan mengenakan setelan jas formal hitam"
             width={682}
-            height={1024}
+            height={580}
             priority
-            className="max-h-[420px] sm:max-h-[480px] w-auto object-contain filter contrast-[104%] brightness-[98%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
+            className="max-h-[300px] sm:max-h-[360px] w-auto object-contain filter contrast-[104%] brightness-[98%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
           />
         </div>
       </div>
