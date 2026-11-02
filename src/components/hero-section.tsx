@@ -10,7 +10,7 @@ export function HeroSection() {
   return (
     <section
       id="beranda"
-      className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-20 pb-16 sm:pb-24 overflow-hidden z-10 border-b border-white/5"
+      className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-24 overflow-hidden z-10 border-b border-white/5"
       aria-labelledby="hero-name"
     >
       {/* Background Soft Crimson Ambient Radial Glow */}

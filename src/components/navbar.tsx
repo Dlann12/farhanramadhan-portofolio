@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import confetti from "canvas-confetti";
@@ -10,6 +10,16 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleCtaClick = (_e?: React.MouseEvent) => {
     confetti({
@@ -30,12 +40,20 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#090607]/85 backdrop-blur-md">
-      <div className="max-w-[1240px] mx-auto flex items-center justify-between px-6 py-4">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
+        isScrolled
+          ? "bg-[#090607]/95 backdrop-blur-md border-b border-[#c81e28]/25 shadow-[0_4px_25px_rgba(0,0,0,0.85)] py-3 sm:py-3.5"
+          : "bg-[#090607]/80 backdrop-blur-md border-b border-white/[0.08] py-4"
+      )}
+    >
+      <div className="max-w-[1240px] mx-auto flex items-center justify-between px-4 sm:px-6">
         {/* Brand */}
         <Link
           href="#beranda"
           className="flex items-center gap-2.5 group"
+          onClick={() => setMobileMenuOpen(false)}
         >
           <div className="size-2 rounded-full bg-[#c81e28] animate-pulse" />
           <div className="flex flex-col text-xs uppercase tracking-[0.14em] font-bold leading-tight">
@@ -71,11 +89,11 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle (min 44px tap target) */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-[#f5f5f7] hover:text-[#e62e39] focus:outline-none"
+          className="md:hidden size-11 flex items-center justify-center text-[#f5f5f7] hover:text-[#e62e39] hover:bg-white/5 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e62e39]"
           aria-expanded={mobileMenuOpen}
           aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
         >
@@ -83,27 +101,29 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown (Fixed underneath header) */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-b border-[#c81e28]/20 bg-[#0e080a]/95 backdrop-blur-xl px-6 py-6"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden border-b border-[#c81e28]/30 bg-[#0e080a]/98 backdrop-blur-2xl px-6 py-5 shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm uppercase tracking-wider text-[#a39e9e] hover:text-[#e62e39] font-medium py-1 transition-colors"
+                  className="text-sm uppercase tracking-wider text-[#d1cece] hover:text-[#e62e39] font-medium py-1.5 transition-colors border-b border-white/5 last:border-none flex items-center justify-between"
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  <span className="text-xs text-[#e62e39] font-mono">→</span>
                 </Link>
               ))}
-              <div className="pt-2 border-t border-white/10">
+              <div className="pt-3 border-t border-white/10 mt-1">
                 <Link
                   href="#kontak"
                   onClick={() => {
@@ -112,10 +132,10 @@ export function Navbar() {
                   }}
                   className={cn(
                     buttonVariants(),
-                    "w-full bg-[#c81e28] hover:bg-[#e62e39] text-xs uppercase tracking-wider font-semibold text-white h-10"
+                    "w-full bg-[#c81e28] hover:bg-[#e62e39] text-xs uppercase tracking-wider font-semibold text-white h-11"
                   )}
                 >
-                  Terbuka untuk peluang <span className="ml-1 font-bold">+</span>
+                  Kolaborasi Visual <span className="ml-1 font-bold">+</span>
                 </Link>
               </div>
             </div>

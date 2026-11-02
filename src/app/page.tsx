@@ -10,24 +10,29 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#090607] text-[#f5f5f7] overflow-x-hidden selection:bg-[#c81e28] selection:text-white">
+    <div className="relative min-h-screen bg-[#090607] text-[#f5f5f7] selection:bg-[#c81e28] selection:text-white">
       {/* Subtle cinema darkroom ambient glow */}
       <div
         className="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(circle_at_50%_15%,rgba(200,30,40,0.14)_0%,transparent_60%)]"
         aria-hidden="true"
       />
 
+      {/* Fixed Navbar - stays sticky and visible at the top during scroll on both desktop and mobile */}
       <Navbar />
-      <HeroSection />
-      <div id="spesialisasi">
-        <VideoEditorTimeline />
-      </div>
-      <JasaRaharjaSection />
-      <ExperienceSection />
-      <TrioSection />
-      <GallerySection />
-      <ContactSection />
+
+      <main className="relative z-10 overflow-x-hidden">
+        <HeroSection />
+        <div id="spesialisasi">
+          <VideoEditorTimeline />
+        </div>
+        <JasaRaharjaSection />
+        <ExperienceSection />
+        <TrioSection />
+        <GallerySection />
+        <ContactSection />
+      </main>
+
       <Footer />
-    </main>
+    </div>
   );
 }
