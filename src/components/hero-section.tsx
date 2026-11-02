@@ -49,14 +49,14 @@ export function HeroSection() {
       </div>
 
       {/* Centered Portrait Cutout */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[3] pointer-events-none w-auto max-h-[clamp(520px,84vh,780px)] flex justify-center">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[3] pointer-events-none w-auto max-h-[clamp(540px,86vh,820px)] flex justify-center">
         <Image
           src="/assets/img/farhan-hero.webp"
           alt="Farhan Ramadhan mengenakan setelan jas formal hitam"
-          width={807}
-          height={830}
+          width={682}
+          height={1024}
           priority
-          className="max-h-[clamp(520px,84vh,780px)] w-auto object-contain filter contrast-[105%] brightness-[96%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)]"
+          className="max-h-[clamp(540px,86vh,820px)] w-auto object-contain filter contrast-[104%] brightness-[98%] drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)]"
         />
       </div>
 

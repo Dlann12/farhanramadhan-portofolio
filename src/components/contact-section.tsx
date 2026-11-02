@@ -158,9 +158,9 @@ export function ContactSection() {
                 <Image
                   src="/assets/img/farhan-formal.jpg"
                   alt="Potret formal Farhan Ramadhan, S.I.Kom"
-                  width={600}
-                  height={900}
-                  className="h-80 w-full object-cover rounded-lg group-hover/card:shadow-xl"
+                  width={682}
+                  height={1024}
+                  className="h-80 w-full object-cover object-top rounded-lg group-hover/card:shadow-xl"
                 />
               </CardItem>
               <div className="text-center mt-3">
