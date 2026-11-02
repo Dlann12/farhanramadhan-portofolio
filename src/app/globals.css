@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-pjs: var(--font-pjs), sans-serif;
   --font-anton: var(--font-anton), sans-serif;
   --font-script: var(--font-script), cursive;
   --color-crimson: #c81e28;
