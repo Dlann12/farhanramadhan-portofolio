@@ -21,7 +21,7 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { label: "Timeline Edit", href: "#timeline" },
+    { label: "Keahlian", href: "#spesialisasi" },
     { label: "Video & Reels", href: "#humas" },
     { label: "Photoshoot", href: "#kampanye-batik" },
     { label: "Workflow & Tools", href: "#pendidikan" },

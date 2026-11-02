@@ -19,7 +19,7 @@ export default function Home() {
 
       <Navbar />
       <HeroSection />
-      <div id="timeline">
+      <div id="spesialisasi">
         <VideoEditorTimeline />
       </div>
       <JasaRaharjaSection />
