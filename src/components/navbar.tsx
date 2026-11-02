@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleCtaClick = () => {
     confetti({
       particleCount: 50,
       spread: 60,

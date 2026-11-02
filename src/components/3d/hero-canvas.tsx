@@ -11,7 +11,7 @@ function FloatingShape() {
 
   const [hovered, setHover] = useState(false);
 
-  useFrame((state, delta) => {
+  useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (meshRef.current) {
       meshRef.current.rotation.x = t * 0.15;

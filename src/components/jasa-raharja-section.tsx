@@ -30,27 +30,19 @@ export function JasaRaharjaSection() {
     setLightboxIndex(null);
   };
 
-  const handlePrev = (e?: React.MouseEvent) => {
+  const handlePrev = React.useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    if (lightboxIndex !== null) {
-      setLightboxIndex(
-        lightboxIndex === 0
-          ? BATIK_CAMPAIGN_ITEMS.length - 1
-          : lightboxIndex - 1
-      );
-    }
-  };
+    setLightboxIndex((prev) =>
+      prev === null ? null : prev === 0 ? BATIK_CAMPAIGN_ITEMS.length - 1 : prev - 1
+    );
+  }, []);
 
-  const handleNext = (e?: React.MouseEvent) => {
+  const handleNext = React.useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    if (lightboxIndex !== null) {
-      setLightboxIndex(
-        lightboxIndex === BATIK_CAMPAIGN_ITEMS.length - 1
-          ? 0
-          : lightboxIndex + 1
-      );
-    }
-  };
+    setLightboxIndex((prev) =>
+      prev === null ? null : prev === BATIK_CAMPAIGN_ITEMS.length - 1 ? 0 : prev + 1
+    );
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -62,7 +54,7 @@ export function JasaRaharjaSection() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxIndex]);
+  }, [lightboxIndex, handlePrev, handleNext]);
 
   return (
     <section id="humas" className="max-w-[1240px] mx-auto px-6 py-20 relative z-10">
