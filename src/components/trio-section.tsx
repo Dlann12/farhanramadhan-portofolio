@@ -85,13 +85,13 @@ export function TrioSection() {
         >
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <Cpu className="size-4 text-[#e62e39]" />
+              <Camera className="size-4 text-[#e62e39]" />
               <span className="text-[11px] font-mono uppercase tracking-widest text-[#e62e39] font-bold">
-                Tools &amp; Stack
+                Gear Rig &amp; NLE Suite
               </span>
             </div>
             <h2 className="font-anton text-xl sm:text-2xl uppercase tracking-wider text-white border-b border-white/10 pb-3 mb-5">
-              Software &amp; Peralatan
+              Kamera, Lensa &amp; NLE Suite
             </h2>
 
             {/* Software badges */}

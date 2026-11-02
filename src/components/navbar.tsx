@@ -21,9 +21,9 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { label: "Karya Visual", href: "#kampanye-batik" },
+    { label: "Timeline Edit", href: "#timeline" },
     { label: "Video & Reels", href: "#humas" },
-    { label: "Pengalaman", href: "#pengalaman" },
+    { label: "Photoshoot", href: "#kampanye-batik" },
     { label: "Workflow & Tools", href: "#pendidikan" },
     { label: "Galeri Foto", href: "#dokumentasi" },
     { label: "Kontak", href: "#kontak" },
